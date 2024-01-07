@@ -2,6 +2,8 @@ class Decandbin {
     public static void main(String[] args) {
          HelloWorld obj = new HelloWorld();
          System.out.println(obj.dTob(10));
+         System.out.println(obj.lastBit(5));
+         System.out.println(obj.rightShift(5));
     }
     int dTob(int n)
     {
@@ -16,5 +18,14 @@ class Decandbin {
             i++;
         }
         return bin;
+    }
+     int lastBit(int n)
+    {
+        return n&1;
+    }
+    int rightShift(int n)
+    {
+        n=n>>1;
+        return n;
     }
 }
