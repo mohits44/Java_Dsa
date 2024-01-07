@@ -1,9 +1,11 @@
-class Decandbin {
+class HelloWorld {
     public static void main(String[] args) {
          HelloWorld obj = new HelloWorld();
          System.out.println(obj.dTob(10));
          System.out.println(obj.lastBit(5));
          System.out.println(obj.rightShift(5));
+         obj.evenOdd(5);
+         
     }
     int dTob(int n)
     {
@@ -19,7 +21,7 @@ class Decandbin {
         }
         return bin;
     }
-     int lastBit(int n)
+    int lastBit(int n)
     {
         return n&1;
     }
@@ -28,4 +30,13 @@ class Decandbin {
         n=n>>1;
         return n;
     }
+    void evenOdd(int n)
+    {
+        if((n&1)==1)
+        System.out.println("odd");
+        else
+        System.out.println("even");
+    }
+    // neg to bin
+  
 }
