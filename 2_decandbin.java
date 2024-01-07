@@ -5,6 +5,7 @@ class HelloWorld {
          System.out.println(obj.lastBit(5));
          System.out.println(obj.rightShift(5));
          obj.evenOdd(5);
+         System.out.println(obj.bToD(1010));
          
     }
     int dTob(int n)
@@ -37,6 +38,23 @@ class HelloWorld {
         else
         System.out.println("even");
     }
-    // neg to bin
+    // neg to bin afterwards
+    
+    int bToD(int n)
+    {
+        int i=0;
+        int dec=0;
+        int digit;
+        while(n!=0)
+        {
+            digit=n%10;
+            if(digit==1)
+            dec=dec+(int)Math.pow(2,i);
+            
+            n=n/10;
+              i++;
+        }
+        return dec;
+    }
   
 }
